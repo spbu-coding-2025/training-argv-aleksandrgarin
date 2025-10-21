@@ -25,11 +25,6 @@ int main(int argc, char* argv[]){
         return 1;
     }
 
-    if (upper_bound <= lower_bound){
-        printf("The lower bound is greater than the upper bound.\n");
-        return 1;
-    }
-
     if (l_found == 0){
         fprintf(stderr, "Flag --lower_bound is missing.");
         return 1;
@@ -37,6 +32,11 @@ int main(int argc, char* argv[]){
 
     if (u_found == 0){
         fprintf(stderr, "Flag --upper_bound is missing.");
+        return 1;
+    }
+
+    if (upper_bound < lower_bound){
+        printf("The lower bound is greater than the upper bound.\n");
         return 1;
     }
 
