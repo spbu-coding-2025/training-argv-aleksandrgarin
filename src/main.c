@@ -25,7 +25,7 @@ int main(int argc, char* argv[]){
         return 1;
     }
 
-    if (upper_bound < lower_bound){
+    if (upper_bound <= lower_bound){
         printf("The lower bound is greater than the upper bound.\n");
         return 1;
     }
